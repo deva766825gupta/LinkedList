@@ -1,0 +1,26 @@
+ bool compute(Node* head) {
+        // Your code goes here
+        string s="";
+        Node* temp=head;
+        while(temp!=NULL)
+        {
+            s=s+temp->data;
+            temp=temp->next;
+        }
+          int n = s.size();
+        int i=0;
+        int j=n-1;
+        while(i<=j)
+        {
+            if(s[i]!=s[j])
+            {
+                return false;
+            }
+            else{
+                i++;
+            j--;
+            }
+        }
+        return true;
+        
+    }
